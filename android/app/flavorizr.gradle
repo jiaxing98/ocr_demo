@@ -1,0 +1,21 @@
+android {
+    flavorDimensions += "flavor-type"
+
+    productFlavors {
+        dev {
+            dimension "flavor-type"
+            applicationId "com.example.ocr_demo.dev"
+            resValue "string", "app_name", "[Dev] OCR demo"
+        }
+        stg {
+            dimension "flavor-type"
+            applicationId "com.example.ocr_demo.stg"
+            resValue "string", "app_name", "[Stg] OCR demo"
+        }
+        prod {
+            dimension "flavor-type"
+            applicationId "com.example.ocr_demo"
+            resValue "string", "app_name", "OCR demo"
+        }
+    }
+}
