@@ -100,11 +100,6 @@ dependencies:
   # https://pub.dev/packages/shared_preferences
   shared_preferences: ^2.2.3
 
-  # Drift is a reactive persistence library for Flutter and Dart, built on top of SQLite.
-  # https://pub.dev/packages/drift
-  drift: ^2.24.0
-  drift_flutter: ^0.2.4
-
   # This plugin provides a cross-platform (iOS, Android) API to request permissions and check their status.
   # https://pub.dev/packages/permission_handler
   permission_handler: ^11.3.1
@@ -121,9 +116,13 @@ dependencies:
   # https://pub.dev/packages/image_picker
   image_picker: ^1.1.2
 
-  # Native PDF View for iOS and Android
-  # https://pub.dev/packages/flutter_pdfview
-  flutter_pdfview: ^1.4.0+1
+  # A package that allows you to use the native file explorer to pick single or multiple files, with extensions filtering support.
+  # https://pub.dev/packages/file_picker
+  file_picker: ^10.1.2
+
+  # Flutter Render & show PDF documents on Web, MacOs 10.11+, Android 5.0+, iOS and Windows.
+  # https://pub.dev/packages/pdfx
+  pdfx: ^2.9.0
 
   # A Flutter plugin for iOS, Android and Web allowing access to the device cameras.
   # https://pub.dev/packages/camera
@@ -170,10 +169,6 @@ dependencies:
   # https://pub.dev/packages/auto_size_text
   auto_size_text: ^3.0.0
 
-  # The free Font Awesome Icon pack available as set of Flutter Icons
-  # https://pub.dev/packages/font_awesome_flutter
-  font_awesome_flutter: ^10.8.0
-
   # A performant library that makes it simple to add almost any kind of animated effect in Flutter.
   # https://pub.dev/packages/flutter_animate
   flutter_animate: ^4.5.2
@@ -189,6 +184,10 @@ dependencies:
   # A Flutter plugin to use Google's ML Kit Text Recognition to recognize text in any Chinese, Devanagari, Japanese, Korean and Latin character set.
   # https://pub.dev/packages/google_mlkit_text_recognition
   google_mlkit_text_recognition: ^0.15.0
+
+  # A Flutter plugin to use Google's ML Kit Document Scanner to digitize physical documents, which allows users to convert physical documents into digital formats.
+  # https://pub.dev/packages/google_mlkit_document_scanner
+  google_mlkit_document_scanner: ^0.4.0
 
 dev_dependencies:
   flutter_test:
