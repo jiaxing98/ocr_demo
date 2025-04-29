@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 import 'package:ocr_demo/core/extensions/build_context.dart';
 import 'package:ocr_demo/core/l10n/l10n.dart';
 import 'package:ocr_demo/core/theme/theme.dart';
 import 'package:ocr_demo/presentation/home/widgets/action_button.dart';
 import 'package:ocr_demo/presentation/home/widgets/expandable_fab.dart';
+import 'package:ocr_demo/router/router.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -37,14 +39,13 @@ class _HomePageState extends State<HomePage> {
             builder: (context, state) {
               return IconButton(
                 onPressed: () => context.read<ThemeCubit>().changeMode(
-                  switch (state.mode) {
-                    ThemeMode.light => ThemeMode.dark,
-                    ThemeMode.dark => ThemeMode.light,
-                    ThemeMode.system => context.brightness == Brightness.light
-                        ? ThemeMode.dark
-                        : ThemeMode.light,
-                  },
-                ),
+                      switch (state.mode) {
+                        ThemeMode.light => ThemeMode.dark,
+                        ThemeMode.dark => ThemeMode.light,
+                        ThemeMode.system =>
+                          context.brightness == Brightness.light ? ThemeMode.dark : ThemeMode.light,
+                      },
+                    ),
                 icon: switch (state.mode) {
                   ThemeMode.light => Icon(Icons.light_mode),
                   ThemeMode.dark => Icon(Icons.dark_mode),
@@ -63,6 +64,7 @@ class _HomePageState extends State<HomePage> {
             children: [
               Expanded(
                 child: Column(
+                  spacing: 16.0,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Text(context.l10n.counterMessage),
@@ -70,10 +72,27 @@ class _HomePageState extends State<HomePage> {
                       '$_counter',
                       style: Theme.of(context).textTheme.headlineMedium,
                     ),
-                    SizedBox(height: 24.0),
-                    OutlinedButton(
-                      onPressed: _incrementCounter,
-                      child: Text(context.l10n.incrementButton),
+                    Column(
+                      spacing: 8.0,
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 48.0),
+                          child: OutlinedButton(
+                            onPressed: _incrementCounter,
+                            child: Text(context.l10n.incrementButton),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 48.0),
+                          child: OutlinedButton(
+                            onPressed: () {
+                              context.pushNamed(Routes.textRecognizer);
+                            },
+                            child: Text('OCR'),
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),

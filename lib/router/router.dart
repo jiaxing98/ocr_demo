@@ -17,9 +17,17 @@ final GoRouter router = GoRouter(
         return const HomePage();
       },
     ),
+    GoRoute(
+      path: Routes.textRecognizer,
+      name: Routes.textRecognizer,
+      builder: (context, state) {
+        return const TextRecognizerPage();
+      },
+    ),
   ],
 );
 
 abstract final class Routes {
   static const String home = "/";
+  static const String textRecognizer = "/textRecognizer";
 }

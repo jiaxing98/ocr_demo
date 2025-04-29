@@ -1,3 +1,9 @@
+ext {
+    compileSdk = 35
+    minSdk = 21
+    targetSdk = 35
+}
+
 allprojects {
     repositories {
         google()

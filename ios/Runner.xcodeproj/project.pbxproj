@@ -147,7 +147,6 @@
 				B1A7B81AFEF6CE3D35376D3D /* Pods-RunnerTests.release.xcconfig */,
 				66A932279D80FB3254B07C36 /* Pods-RunnerTests.profile.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -575,6 +574,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5B30D716894BB29973E11CE0 /* prodDebug.xcconfig */;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Debug-prod";
@@ -712,6 +712,7 @@
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -728,6 +729,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0FF28FAF2014B25B2915D261 /* devRelease.xcconfig */;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Release-dev";
@@ -933,7 +935,71 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FAC9884BB457FF33475B75C8 /* prodRelease.xcconfig */;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = "Release-prod";
+		};
+		42636E612DC08CBF0031115E /* Debug-dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = RunnerTests;
+			};
+			name = "Debug-dev";
+		};
+		42636E622DC08CBF0031115E /* Profile-dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = RunnerTests;
+			};
+			name = "Profile-dev";
+		};
+		42636E632DC08CBF0031115E /* Release-dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = RunnerTests;
+			};
+			name = "Release-dev";
+		};
+		42636E642DC08CBF0031115E /* Debug-stg */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = RunnerTests;
+			};
+			name = "Debug-stg";
+		};
+		42636E652DC08CBF0031115E /* Profile-stg */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = RunnerTests;
+			};
+			name = "Profile-stg";
+		};
+		42636E662DC08CBF0031115E /* Release-stg */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = RunnerTests;
+			};
+			name = "Release-stg";
+		};
+		42636E672DC08CBF0031115E /* Debug-prod */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = RunnerTests;
+			};
+			name = "Debug-prod";
+		};
+		42636E682DC08CBF0031115E /* Profile-prod */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = RunnerTests;
+			};
+			name = "Profile-prod";
+		};
+		42636E692DC08CBF0031115E /* Release-prod */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = RunnerTests;
 			};
 			name = "Release-prod";
 		};
@@ -1013,6 +1079,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6F0C660F68BC3A70AA8C76B1 /* stgDebug.xcconfig */;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Debug-stg";
@@ -1021,6 +1088,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7D32B8F501FAA8B22B7945C4 /* devDebug.xcconfig */;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Debug-dev";
@@ -1145,6 +1213,7 @@
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1167,6 +1236,7 @@
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1253,6 +1323,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3CAD97937F75A718077F325A /* prodProfile.xcconfig */;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Profile-prod";
@@ -1406,6 +1477,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BB4653CEF592C3694553E44D /* stgProfile.xcconfig */;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Profile-stg";
@@ -1414,6 +1486,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E7556BBEB4EEFECE02CEE398 /* stgRelease.xcconfig */;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Release-stg";
@@ -1492,6 +1565,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3413F80D4C5B9D2360899456 /* devProfile.xcconfig */;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Profile-dev";
@@ -1505,6 +1579,15 @@
 				331C8088294A63A400263BE5 /* Debug */,
 				331C8089294A63A400263BE5 /* Release */,
 				331C808A294A63A400263BE5 /* Profile */,
+				42636E612DC08CBF0031115E /* Debug-dev */,
+				42636E622DC08CBF0031115E /* Profile-dev */,
+				42636E632DC08CBF0031115E /* Release-dev */,
+				42636E642DC08CBF0031115E /* Debug-stg */,
+				42636E652DC08CBF0031115E /* Profile-stg */,
+				42636E662DC08CBF0031115E /* Release-stg */,
+				42636E672DC08CBF0031115E /* Debug-prod */,
+				42636E682DC08CBF0031115E /* Profile-prod */,
+				42636E692DC08CBF0031115E /* Release-prod */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
