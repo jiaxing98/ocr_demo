@@ -122,7 +122,7 @@ dependencies:
 
   # Flutter Render & show PDF documents on Web, MacOs 10.11+, Android 5.0+, iOS and Windows.
   # https://pub.dev/packages/pdfx
-  pdfx: ^2.9.0
+  pdfx: 2.8.0
 
   # A Flutter plugin for iOS, Android and Web allowing access to the device cameras.
   # https://pub.dev/packages/camera
